@@ -1,12 +1,15 @@
-document.getElementById("clickObject").addEventListener("click", scoreUp, achievementChecker);
+window.onload = function() {
+    document.getElementById("button").addEventListener("click", scoreUp);
+    document.getElementById("button").addEventListener("click", achievementChecker);
+}
 
 function scoreUp() {
-    let originalScore = document.getElementById("score").value;
-    let newScore = originalScore++;
+    let originalScore = parseInt(document.getElementById("score").innerHTML);
+    let newScore = originalScore + 1;
     document.getElementById("score").innerHTML = newScore;
 }
 
 function achievementChecker() {
-    let totalClicks = document.getElementById("score").value;
-    if (totalClicks = 10) alert("10 Clicks!")
+    let totalClicks = parseInt(document.getElementById("score").innerHTML);
+    if (totalClicks === 10) alert("10 Clicks!");
 }
