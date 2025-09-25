@@ -27,7 +27,7 @@ img{
     border-width: 5px;
     border-color: darkgrey;
 }
-#add_upgrade, #multi_upgrade{
+.upgrade{
     border-style: solid;
     border-width: 2px;
     border-color: darkgray;
