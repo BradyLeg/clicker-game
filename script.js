@@ -1,5 +1,7 @@
 let upOne = false;
 
+let achievementOneFlag = false;
+
 window.onload = function() {
     document.getElementById("button").addEventListener("click", scoreUp);
     document.getElementById("button").addEventListener("click", achievementChecker);
@@ -20,7 +22,12 @@ function scoreUp() {
 
 function achievementChecker() {
     let totalClicks = parseInt(document.getElementById("score").innerHTML);
-    if (totalClicks === 10) alert("10 Clicks!");
+    if (totalClicks >= 10 && !achievementOneFlag)
+    {
+        achievementOneFlag = true;
+        alert("10 Clicks!");
+    }
+
 }
 
 function upgradeOne() {
