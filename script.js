@@ -4,8 +4,8 @@ let upgradeMultiplier = false;
 let achievement10Flag = false;
 let achievement100Flag = false;
 
-let achievement10Clicks = "10 Clicks!";
-let achievement100Clicks = "100 Clicks!";
+const achievement10Clicks = "10 Clicks!";
+const achievement100Clicks = "100 Clicks!";
 
 window.onload = function() {
     document.getElementById("button").addEventListener("click", scoreUp);
@@ -31,18 +31,20 @@ function scoreUp() {
 function achievementChecker() {
     let totalClicks = parseInt(document.getElementById("score").innerHTML);
 
-    if (totalClicks >= 10 && !achievement10Flag)
+    
+    if (totalClicks >= 100 && achievement100Flag)
+    {
+        achievement100Flag = true;
+        alert(achievement100Clicks);
+        let p = document.createElement("p");
+        p.innerHTML = achievement100Clicks;
+        document.getElementById("ach-text").appendChild(p);
+    }
+    else if (totalClicks >= 10 && !achievement10Flag)
     {
         achievement10Flag = true;
         alert(achievement10Clicks);
         document.getElementById("ach-text").innerHTML = achievement10Clicks;
-    }
-    else if (totalClicks >= 100 && achievement100Flag)
-    {
-        achievement100Flag = true;
-        alert(achievement100Clicks);
-        // Add new section here
-        document.getElementById("ach-text").innerHTML = achievement100Clicks;
     }
 
 }
