@@ -32,7 +32,7 @@ function achievementChecker() {
     let totalClicks = parseInt(document.getElementById("score").innerHTML);
 
     
-    if (totalClicks >= 100 && achievement100Flag)
+    if (totalClicks >= 100 && !achievement100Flag)
     {
         achievement100Flag = true;
         alert(achievement100Clicks);
