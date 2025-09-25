@@ -1,3 +1,4 @@
+// Variables & Flags
 let upgradeAddOne = false;
 let upgradeMultiplier = false;
 
@@ -7,6 +8,7 @@ let achievement100Flag = false;
 const achievement10Clicks = "10 Clicks!";
 const achievement100Clicks = "100 Clicks!";
 
+// Set up
 window.onload = function() {
     document.getElementById("button").addEventListener("click", scoreUp);
     document.getElementById("button").addEventListener("click", achievementChecker);
@@ -14,6 +16,7 @@ window.onload = function() {
     document.getElementById("multi_upgrade").addEventListener("click", upgradeMult);
 }
 
+// Changing Score
 function scoreUp() {
     let originalScore = parseInt(document.getElementById("score").innerHTML);
     let modifier = 0;
@@ -28,6 +31,7 @@ function scoreUp() {
     document.getElementById("score").innerHTML = newScore;
 }
 
+// Achievements
 function achievementChecker() {
     let totalClicks = parseInt(document.getElementById("score").innerHTML);
 
@@ -49,6 +53,7 @@ function achievementChecker() {
 
 }
 
+// Upgrades
 function upgradeAdd() {
     upgradeAddOne = true;
 }
