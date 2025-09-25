@@ -2,10 +2,12 @@ let upOne = false;
 
 let achievementOneFlag = false;
 
+let achievementOne = "10 Clicks";
+
 window.onload = function() {
     document.getElementById("button").addEventListener("click", scoreUp);
     document.getElementById("button").addEventListener("click", achievementChecker);
-    this.document.getElementById("multi_upgrade").addEventListener("click", upgradeOne);
+    document.getElementById("multi_upgrade").addEventListener("click", upgradeOne);
 }
 
 function scoreUp() {
@@ -25,7 +27,8 @@ function achievementChecker() {
     if (totalClicks >= 10 && !achievementOneFlag)
     {
         achievementOneFlag = true;
-        alert("10 Clicks!");
+        alert(achievementOne);
+        document.getElementById("ach-text").innerHTML = achievementOne;
     }
 
 }
