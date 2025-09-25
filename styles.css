@@ -1,13 +1,18 @@
+main{
+    float: left;
+}
 body{
     background-color: #F2E577;
 }
 header{
     background-color: #F2A749;
+    text-align: center;
 }
 footer{
     background-color: #E05F19;
 }
 aside{
+    float: right;
     background-color: #F2A749;
 }
 p,h1,h2,h3,h4{
