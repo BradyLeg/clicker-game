@@ -4,4 +4,4 @@ By Brady, Gabby, Maple
 Concept
 ![](concept.png)  
 
-Click on the box and your score goes up.
+Score goes up by how many time you've clicked. Get upgrades to increase your score.
