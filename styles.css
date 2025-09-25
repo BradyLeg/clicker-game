@@ -20,6 +20,8 @@ p,h1,h2,h3,h4{
 }
 
 img{
+    max-width: 20%;
+    height: auto;
     border-radius: 40px;
 }
 #button{
