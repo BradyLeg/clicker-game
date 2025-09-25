@@ -1,5 +1,7 @@
 Clicker-Game  
-By Brady, Gabby, Maple
+By Brady, Gabby, Maple  
+
+https://bradyleg.github.io/clicker-game/
 
 Concept
 ![](concept.png)  
