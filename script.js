@@ -5,6 +5,7 @@ let upgradeMultiplier = false;
 let achievement10Flag = false;
 let achievement100Flag = false;
 
+const unlock = "ACHIEVEMENT UNLOCKED: ";
 const achievement10Clicks = "10 Clicks!";
 const achievement100Clicks = "100 Clicks!";
 
@@ -39,7 +40,7 @@ function achievementChecker() {
     if (totalClicks >= 100 && !achievement100Flag)
     {
         achievement100Flag = true;
-        alert(achievement100Clicks);
+        alert(unlock + achievement100Clicks);
         let p = document.createElement("p");
         p.innerHTML = achievement100Clicks;
         document.getElementById("ach-text").appendChild(p);
@@ -47,7 +48,7 @@ function achievementChecker() {
     else if (totalClicks >= 10 && !achievement10Flag)
     {
         achievement10Flag = true;
-        alert(achievement10Clicks);
+        alert(unlock + achievement10Clicks);
         document.getElementById("ach-text").innerHTML = achievement10Clicks;
     }
 
@@ -56,8 +57,10 @@ function achievementChecker() {
 // Upgrades
 function upgradeAdd() {
     upgradeAddOne = true;
+    alert("Unlocked Add Click!");
 }
 
 function upgradeMult() {
+    alert("Unlocked Click Multiplier!");
     upgradeMultiplier = true;
 }
